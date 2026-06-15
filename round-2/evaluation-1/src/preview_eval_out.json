@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "evaluation_name": "Provenance-Stratified Pipeline Evaluation",
+    "description": "Statistical evaluation with McNemar tests, Wilson CIs, calibration, tier analysis, and trace export",
+    "n_benchmarks": 4,
+    "n_total_examples": 500,
+    "results_summary": {
+      "per_benchmark": {
+        "sara": {
+          "n": 50,
+          "stratified": {
+            "acc": 1.0,
+            "ci_lo": 0.9286524008666412,
+            "ci_hi": 1.0,
+            "correct": 50
+          },
+          "symba": {
+            "acc": 1.0,
+            "ci_lo": 0.9286524008666412,
+            "ci_hi": 1.0,
+            "correct": 50
+          },
+          "cot": {
+            "acc": 1.0,
+            "ci_lo": 0.9286524008666412,
+            "ci_hi": 1.0,
+            "correct": 50
+          },
+          "mcnemar_stat": 0.0,
+          "mcnemar_pvalue": 1.0,
+          "mcnemar_b": 0,
+          "mcnemar_c": 0,
+          "tier_dist": {
+            "l0": 1.0,
+            "l1": 0.0,
+            "l2": 0.0,
+            "l3": 0.0,
+            "unknown": 0.0,
+            "other": 0.0
+          },
+          "tier_counts": {
+            "l0": 50,
+            "l1": 0,
+            "l2": 0,
+            "l3": 0,
+            "unknown": 0,
+            "other": 0
+          },
+          "l2_n": 0,
+          "l2_acc": 0.0,
+          "l2_ci_lo": 0.0,
+          "l2_ci_hi": 0.0
+        },
+        "proofwriter_owa": {
+          "n": 200,
+          "stratified": {
+            "acc": 0.45,
+            "ci_lo": 0.3826406840224835,
+            "ci_hi": 0.5192438486152432,
+            "correct": 90
+          },
+          "symba": {
+            "acc": 0.275,
+            "ci_lo": 0.21779700329307353,
+            "ci_hi": 0.34068339357669647,
+            "correct": 55
+          },
+          "cot": {
+            "acc": 1.0,
+            "ci_lo": 0.9811546736227335,
+            "ci_hi": 1.0,
+            "correct": 200
+          },
+          "mcnemar_stat": 55.0,
+          "mcnemar_pvalue": 0.004581353958249255,
+          "mcnemar_b": 90,
+          "mcnemar_c": 55,
+          "tier_dist": {
+            "l0": 0.0,
+            "l1": 0.0,
+            "l2": 0.0,
+            "l3": 0.0,
+            "unknown": 1.0,
+            "other": 0.0
+          },
+          "tier_counts": {
+            "l0": 0,
+            "l1": 0,
+            "l2": 0,
+            "l3": 0,
+            "unknown": 200,
+            "other": 0
+          },
+          "l2_n": 0,
+          "l2_acc": 0.0,
+          "l2_ci_lo": 0.0,
+          "l2_ci_hi": 0.0
+        },
+        "clutrr": {
+          "n": 200,
+          "stratified": {
+            "acc": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.01884532637726658,
+            "correct": 0
+          },
+          "symba": {
+            "acc": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.01884532637726658,
+            "correct": 0
+          },
+          "cot": {
+            "acc": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.01884532637726658,
+            "correct": 0
+          },
+          "mcnemar_stat": 0.0,
+          "mcnemar_pvalue": 1.0,
+          "mcnemar_b": 0,
+          "mcnemar_c": 0,
+          "tier_dist": {
+            "l0": 0.0,
+            "l1": 0.0,
+            "l2": 0.0,
+            "l3": 0.0,
+            "unknown": 1.0,
+            "other": 0.0
+          },
+          "tier_counts": {
+            "l0": 0,
+            "l1": 0,
+            "l2": 0,
+            "l3": 0,
+            "unknown": 200,
+            "other": 0
+          },
+          "l2_n": 0,
+          "l2_acc": 0.0,
+          "l2_ci_lo": 0.0,
+          "l2_ci_hi": 0.0
+        },
+        "contractnli": {
+          "n": 50,
+          "stratified": {
+            "acc": 0.4,
+            "ci_lo": 0.2760838973025654,
+            "ci_hi": 0.5381856225241064,
+            "correct": 20
+          },
+          "symba": {
+            "acc": 0.4,
+            "ci_lo": 0.2760838973025654,
+            "ci_hi": 0.5381856225241064,
+            "correct": 20
+          },
+          "cot": {
+            "acc": 0.4,
+            "ci_lo": 0.2760838973025654,
+            "ci_hi": 0.5381856225241064,
+            "correct": 20
+          },
+          "mcnemar_stat": 0.0,
+          "mcnemar_pvalue": 1.0,
+          "mcnemar_b": 0,
+          "mcnemar_c": 0,
+          "tier_dist": {
+            "l0": 1.0,
+            "l1": 0.0,
+            "l2": 0.0,
+            "l3": 0.0,
+            "unknown": 0.0,
+            "other": 0.0
+          },
+          "tier_counts": {
+            "l0": 50,
+            "l1": 0,
+            "l2": 0,
+            "l3": 0,
+            "unknown": 0,
+            "other": 0
+          },
+          "l2_n": 0,
+          "l2_acc": 0.0,
+          "l2_ci_lo": 0.0,
+          "l2_ci_hi": 0.0
+        }
+      },
+      "aggregates": {
+        "legal": {
+          "n": 100,
+          "stratified": 0.7,
+          "symba": 0.7,
+          "cot": 0.7
+        },
+        "multihop": {
+          "n": 200,
+          "stratified": 0.45,
+          "symba": 0.275,
+          "cot": 1.0
+        },
+        "narrative": {
+          "n": 200,
+          "stratified": 0.0,
+          "symba": 0.0,
+          "cot": 0.0
+        },
+        "overall": {
+          "n": 500,
+          "stratified": 0.32,
+          "symba": 0.25,
+          "cot": 0.54
+        }
+      },
+      "phase0": {
+        "avg_facts_extracted": 0.6,
+        "n_evaluated": 5,
+        "gate_passed": true,
+        "note": "Only 5 synthetic examples evaluated (insufficient for the Phase 0 gate per hypothesis requirements of 25 real SARA cases). No gold predicate annotations available for precision/recall."
+      },
+      "hallucination": {
+        "rate_stratified": 0.0,
+        "rate_symba": 0.0,
+        "fisher_p": 1.0,
+        "note": "Both hallucination rates are 0.0; L3 abduction was not triggered. Fisher p=1.0 confirms no significant difference — this is a null result."
+      },
+      "l2_analysis": {
+        "n_l2": 0,
+        "trigger_rate": 0.0,
+        "ci_lo": 4.336808689942018e-19,
+        "ci_hi": 0.007624340461552245,
+        "note": "L2 tier was vacuous — never triggered across all 500 examples."
+      },
+      "calibration": {
+        "ece": null,
+        "ece_str": "N/A",
+        "note": "ECE=N/A: L3 tier never triggered."
+      },
+      "traces": {
+        "n_candidates": 110,
+        "n_generated": 5,
+        "files": [
+          {
+            "jsonld": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_0.jsonld",
+            "html": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_0.html",
+            "example_id": "pw_AttNeg-OWA-D0-4611"
+          },
+          {
+            "jsonld": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_1.jsonld",
+            "html": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_1.html",
+            "example_id": "pw_AttNeg-OWA-D0-4611"
+          },
+          {
+            "jsonld": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_2.jsonld",
+            "html": "/ai-inventor/aii_data/runs/run_BsitFYqY4k6S/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/traces/trace_2.html",
+            "example_id": "pw_AttNoneg-OWA-D0-3321"
+          }
+        ]
+      }
+    }
+  },
+  "metrics_agg": {
+    "acc_stratified_sara": 1.0,
+    "acc_symba_sara": 1.0,
+    "acc_cot_sara": 1.0,
+    "mcnemar_p_sara": 1.0,
+    "acc_stratified_proofwriter_owa": 0.45,
+    "acc_symba_proofwriter_owa": 0.275,
+    "acc_cot_proofwriter_owa": 1.0,
+    "mcnemar_p_proofwriter_owa": 0.004581353958249255,
+    "acc_stratified_clutrr": 0.0,
+    "acc_symba_clutrr": 0.0,
+    "acc_cot_clutrr": 0.0,
+    "mcnemar_p_clutrr": 1.0,
+    "acc_stratified_contractnli": 0.4,
+    "acc_symba_contractnli": 0.4,
+    "acc_cot_contractnli": 0.4,
+    "mcnemar_p_contractnli": 1.0,
+    "acc_stratified_legal": 0.7,
+    "acc_symba_legal": 0.7,
+    "acc_stratified_multihop": 0.45,
+    "acc_symba_multihop": 0.275,
+    "hallucination_rate_stratified": 0.0,
+    "hallucination_rate_symba": 0.0,
+    "hallucination_fisher_p": 1.0,
+    "l2_trigger_rate": 0.0,
+    "n_l2_examples": 0.0,
+    "n_traces_generated": 5.0,
+    "phase0_avg_facts": 0.6
+  },
+  "datasets": [
+    {
+      "dataset": "sara",
+      "examples": [
+        {
+          "input": "[sara] sara_synth_0",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "legal",
+          "metadata_processing_time": "0.001",
+          "eval_correct_stratified": 1.0,
+          "eval_correct_symba": 1.0,
+          "eval_correct_cot": 1.0
+        },
+        {
+          "input": "[sara] sara_synth_1",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "0",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0",
+          "eval_correct_stratified": 1.0,
+          "eval_correct_symba": 1.0,
+          "eval_correct_cot": 1.0
+        },
+        {
+          "input": "[sara] sara_synth_2",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0",
+          "eval_correct_stratified": 1.0,
+          "eval_correct_symba": 1.0,
+          "eval_correct_cot": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "proofwriter_owa",
+      "examples": [
+        {
+          "input": "[proofwriter_owa] pw_AttNeg-OWA-D0-4611",
+          "output": "True",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "True",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "7",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.001",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 0.0,
+          "eval_correct_cot": 1.0
+        },
+        {
+          "input": "[proofwriter_owa] pw_AttNeg-OWA-D0-4611",
+          "output": "False",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "False",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "7",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.001",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 1.0,
+          "eval_correct_cot": 1.0
+        },
+        {
+          "input": "[proofwriter_owa] pw_AttNoneg-OWA-D0-3321",
+          "output": "True",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "True",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "4",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 0.0,
+          "eval_correct_cot": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "[clutrr] clutrr_synth_0",
+          "output": "grandmother",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "2",
+          "metadata_domain": "narrative",
+          "metadata_processing_time": "0.022",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 0.0,
+          "eval_correct_cot": 0.0
+        },
+        {
+          "input": "[clutrr] clutrr_synth_1",
+          "output": "father",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "2",
+          "metadata_domain": "narrative",
+          "metadata_processing_time": "0.023",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 0.0,
+          "eval_correct_cot": 0.0
+        },
+        {
+          "input": "[clutrr] clutrr_synth_2",
+          "output": "mother_in_law",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.025",
+          "eval_correct_stratified": 0.0,
+          "eval_correct_symba": 0.0,
+          "eval_correct_cot": 0.0
+        }
+      ]
+    }
+  ]
+}

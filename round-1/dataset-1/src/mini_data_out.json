@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "description": "Neuro-symbolic reasoning benchmark: ProofWriter OWA, ContractNLI, SARA, OpenBookQA, CommonsenseQA, SNLI",
+    "total_examples": 28423,
+    "hypothesis": "FOL translation pipeline for multi-hop reasoning over textual documents"
+  },
+  "datasets": [
+    {
+      "dataset": "proofwriter_owa",
+      "examples": [
+        {
+          "input": "Theory: Anne is kind. Erin is kind. Kind things are smart. White, big things are blue. If something is red then it is big. All kind things are big. If something is white and big then it is blue. Green things are red. Kind, smart things are green. All blue, smart things are red.\nQuestion: Erin is white.",
+          "output": "Unknown",
+          "metadata_domain": "general",
+          "metadata_split": "train",
+          "metadata_hop_count": 0,
+          "metadata_original_id": "AttNoneg-OWA-D3-996",
+          "metadata_config": "depth-3ext-NatLang",
+          "metadata_task_type": "logical_reasoning",
+          "metadata_label_type": "three_valued"
+        },
+        {
+          "input": "Theory: Dave is blue. Dave is green. Dave is kind. Dave is quiet. Dave is young. Erin is blue. Erin is quiet. Erin is white. Erin is young. Fiona is kind. Fiona is quiet. Harry is blue. Harry is kind. Harry is white. Harry is young. If someone is quiet and round then they are green. White, young people are quiet. If Harry is quiet then Harry is round.\nQuestion: Harry is not quiet.",
+          "output": "False",
+          "metadata_domain": "general",
+          "metadata_split": "train",
+          "metadata_hop_count": 1,
+          "metadata_original_id": "AttNoneg-OWA-D3-22",
+          "metadata_config": "depth-3ext",
+          "metadata_task_type": "logical_reasoning",
+          "metadata_label_type": "three_valued"
+        },
+        {
+          "input": "Theory: Bob is not big. Bob is cold. Bob is furry. Bob is kind. Bob is not smart. Bob is white. Bob is young. Gary is not big. Gary is cold. Gary is furry. Gary is kind. Gary is not smart. Gary is white. Gary is young. Young people are white.\nQuestion: Bob is not white.",
+          "output": "False",
+          "metadata_domain": "general",
+          "metadata_split": "train",
+          "metadata_hop_count": 0,
+          "metadata_original_id": "AttNeg-OWA-D0-6339",
+          "metadata_config": "depth-0",
+          "metadata_task_type": "logical_reasoning",
+          "metadata_label_type": "three_valued"
+        }
+      ]
+    },
+    {
+      "dataset": "contractnli",
+      "examples": [
+        {
+          "input": "Contract clause: 2.3 Provided that the Recipient has a written agreement with the following persons or entities requiring them to treat the Confidential Information in accordance with this Agreement, the Recipient may disclose the Confidential Information to: 2.3.1  Any other party with the Discloser’s prior written consent; and 2.3.2 the Recipient’s employees, officials, representatives and agents who have a strict need to know the contents of the Confidential Information, and employees, officials, representatives and agents of any legal entity that it controls, controls it, or with which it is under common control, who have a similar need to know the contents of the Confidential Information, provided that, for these purposes a controlled legal entity means:\nHypothesis: Receiving Party shall not reverse engineer any objects which embody Disclosing Party's Confidential Information.",
+          "output": "Contradiction",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 1,
+          "metadata_original_id": "train_0",
+          "metadata_task_type": "natural_language_inference",
+          "metadata_document_type": "NDA_contract"
+        },
+        {
+          "input": "Contract clause: 5. All Confidential Information in any form and any medium, including all copies thereof, disclosed to the Recipient shall be returned to UNHCR or destroyed:  (a) if a business relationship is not entered into with UNHCR on or before the date which is three (3) months after the date both Parties have signed the Agreement; or \nHypothesis: Receiving Party shall destroy or return some Confidential Information upon the termination of Agreement.",
+          "output": "Entailment",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 1,
+          "metadata_original_id": "train_1",
+          "metadata_task_type": "natural_language_inference",
+          "metadata_document_type": "NDA_contract"
+        },
+        {
+          "input": "Contract clause: 4. Nothing in this Agreement is to be construed as granting the Recipient, by implication or otherwise, any right whatsoever with respect to the Confidential Information or part thereof.\nHypothesis: Agreement shall not grant Receiving Party any right to Confidential Information.",
+          "output": "Entailment",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 1,
+          "metadata_original_id": "train_2",
+          "metadata_task_type": "natural_language_inference",
+          "metadata_document_type": "NDA_contract"
+        }
+      ]
+    },
+    {
+      "dataset": "sara",
+      "examples": [
+        {
+          "input": "Case: Alice's income in 2015 is $100000. She gets one exemption of $2000 for the year 2015 under section 151(c). Alice is not married.\nQuestion: Alice's total exemption for 2015 under section 151(a) is equal to $6000. Contradiction",
+          "output": "no",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 0,
+          "metadata_original_id": "s151_a_neg",
+          "metadata_gold_predicates": "[\"income_(alice_makes_money).\", \"agent_(alice_makes_money,alice).\", \"start_(alice_makes_money,\\\"2015-01-01\\\").\", \"end_(alice_makes_money,\\\"2015-12-31\\\").\", \"amount_(alice_makes_money,100000).\", \"s151_c(alice,_,2000,2015).\"]",
+          "metadata_statute_section": "s151",
+          "metadata_task_type": "statutory_reasoning"
+        },
+        {
+          "input": "Case: Alice's income in 2015 is $100000. She gets one exemption of $2000 for the year 2015 under section 151(c). Alice is not married.\nQuestion: Alice's total exemption for 2015 under section 151(a) is equal to $4000. Entailment",
+          "output": "yes",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 0,
+          "metadata_original_id": "s151_a_pos",
+          "metadata_gold_predicates": "[\"income_(alice_makes_money).\", \"agent_(alice_makes_money,alice).\", \"start_(alice_makes_money,\\\"2015-01-01\\\").\", \"end_(alice_makes_money,\\\"2015-12-31\\\").\", \"amount_(alice_makes_money,100000).\", \"s151_c(alice,_,2000,2015).\"]",
+          "metadata_statute_section": "s151",
+          "metadata_task_type": "statutory_reasoning"
+        },
+        {
+          "input": "Case: Alice and Bob have been married since 2 Feb 2015. Bob has no income for 2015. Alice and Bob file their taxes jointly for 2015.\nQuestion: Alice can receive an exemption for Bob under section 151(b) for the year 2015. Contradiction",
+          "output": "no",
+          "metadata_domain": "legal",
+          "metadata_split": "train",
+          "metadata_hop_count": 0,
+          "metadata_original_id": "s151_b_neg",
+          "metadata_gold_predicates": "[\"marriage_(alice_and_bob).\", \"agent_(alice_and_bob,alice).\", \"agent_(alice_and_bob,bob).\", \"start_(alice_and_bob,\\\"2015-02-02\\\").\", \"joint_return_(alice_and_bob_joint_return).\", \"agent_(alice_and_bob_joint_return,alice).\", \"agent_(alice_and_bob_joint_return,bob).\", \"start_(alice_and_bob_joint_return,\\\"2015-01-01\\\").\", \"end_(alice_and_bob_joint_return,\\\"2015-12-31\\\").\"]",
+          "metadata_statute_section": "s151",
+          "metadata_task_type": "statutory_reasoning"
+        }
+      ]
+    },
+    {
+      "dataset": "openbookqa",
+      "examples": [
+        {
+          "input": "Core fact: the sun is the source of energy for physical cycles on Earth\nQuestion: The sun is responsible for\nChoices: A: puppies learning new tricks | B: children growing up and getting old | C: flowers wilting in a vase | D: plants sprouting, blooming and wilting",
+          "output": "D: plants sprouting, blooming and wilting",
+          "metadata_domain": "science",
+          "metadata_split": "train",
+          "metadata_hop_count": 2,
+          "metadata_original_id": "7-980",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_core_fact": "the sun is the source of energy for physical cycles on Earth"
+        },
+        {
+          "input": "Core fact: as distance to an object increases , that object will appear smaller\nQuestion: When standing miles away from Mount Rushmore\nChoices: A: the mountains seem very close | B: the mountains are boring | C: the mountains look the same as from up close | D: the mountains seem smaller than in photographs",
+          "output": "D: the mountains seem smaller than in photographs",
+          "metadata_domain": "science",
+          "metadata_split": "train",
+          "metadata_hop_count": 2,
+          "metadata_original_id": "7-584",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_core_fact": "as distance to an object increases , that object will appear smaller"
+        },
+        {
+          "input": "Core fact: digestion is when stomach acid breaks down food\nQuestion: When food is reduced in the stomach\nChoices: A: the mind needs time to digest | B: take a second to digest what I said | C: nutrients are being deconstructed | D: reader's digest is a body of works",
+          "output": "C: nutrients are being deconstructed",
+          "metadata_domain": "science",
+          "metadata_split": "train",
+          "metadata_hop_count": 2,
+          "metadata_original_id": "7-870",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_core_fact": "digestion is when stomach acid breaks down food"
+        }
+      ]
+    }
+  ]
+}

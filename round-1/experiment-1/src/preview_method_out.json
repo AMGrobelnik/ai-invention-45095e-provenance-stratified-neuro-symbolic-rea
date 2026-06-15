@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "method_name": "Provenance-Stratified Neuro-Symbolic Pipeline",
+    "description": "4-tier neuro-symbolic pipeline: L0 extraction, L1 SLD Prolog, L2 LKIF/ConceptNet, L3 LLM abduction with weakest-link provenance",
+    "model": "meta-llama/llama-3.1-70b-instruct",
+    "baselines": [
+      "SymBa_flat_LLM",
+      "CoT_LLM"
+    ],
+    "note": "Initial results from heuristic baseline; LLM-augmented results generated in parallel",
+    "total_examples": 500,
+    "total_cost_usd": 0.0,
+    "aggregate_metrics": {
+      "sara": {
+        "n_examples": 50,
+        "accuracy_stratified": 1.0,
+        "accuracy_symba": 1.0,
+        "accuracy_cot": 1.0,
+        "hallucination_rate_stratified": 0.0,
+        "hallucination_rate_symba": 0.0,
+        "tier_distribution": {
+          "l0": 1.0,
+          "l1": 0.0,
+          "sld": 0.0,
+          "l2": 0.0,
+          "l3": 0.0,
+          "unknown": 0.0,
+          "l0_l1_l2_fraction": 1.0
+        },
+        "avg_l0_facts": 0.6,
+        "avg_confidence": 0.8,
+        "l0_l1_l2_fraction": 1.0
+      },
+      "proofwriter_owa": {
+        "n_examples": 200,
+        "accuracy_stratified": 0.45,
+        "accuracy_symba": 0.275,
+        "accuracy_cot": 1.0,
+        "hallucination_rate_stratified": 0.0,
+        "hallucination_rate_symba": 0.0,
+        "tier_distribution": {
+          "l0": 0.0,
+          "l1": 0.0,
+          "sld": 0.0,
+          "l2": 0.0,
+          "l3": 0.0,
+          "unknown": 1.0,
+          "l0_l1_l2_fraction": 0.0
+        },
+        "avg_l0_facts": 4.94,
+        "avg_confidence": 0.0,
+        "l0_l1_l2_fraction": 0.0
+      },
+      "clutrr": {
+        "n_examples": 200,
+        "accuracy_stratified": 0.0,
+        "accuracy_symba": 0.0,
+        "accuracy_cot": 0.0,
+        "hallucination_rate_stratified": 0.0,
+        "hallucination_rate_symba": 0.0,
+        "tier_distribution": {
+          "l0": 0.0,
+          "l1": 0.0,
+          "sld": 0.0,
+          "l2": 0.0,
+          "l3": 0.0,
+          "unknown": 1.0,
+          "l0_l1_l2_fraction": 0.0
+        },
+        "avg_l0_facts": 1.4,
+        "avg_confidence": 0.0,
+        "l0_l1_l2_fraction": 0.0
+      },
+      "contractnli": {
+        "n_examples": 50,
+        "accuracy_stratified": 0.4,
+        "accuracy_symba": 0.4,
+        "accuracy_cot": 0.4,
+        "hallucination_rate_stratified": 0.0,
+        "hallucination_rate_symba": 0.0,
+        "tier_distribution": {
+          "l0": 1.0,
+          "l1": 0.0,
+          "sld": 0.0,
+          "l2": 0.0,
+          "l3": 0.0,
+          "unknown": 0.0,
+          "l0_l1_l2_fraction": 1.0
+        },
+        "avg_l0_facts": 0.0,
+        "avg_confidence": 0.8,
+        "l0_l1_l2_fraction": 1.0
+      },
+      "overall": {
+        "n_total": 500,
+        "accuracy_stratified": 0.32,
+        "accuracy_symba": 0.25,
+        "accuracy_cot": 0.54
+      }
+    },
+    "phase0_extraction_calibration": {
+      "avg_facts_extracted": 0.6,
+      "gate_passed": true,
+      "n_evaluated": 5
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "sara",
+      "examples": [
+        {
+          "input": "[sara] sara_synth_0",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "legal",
+          "metadata_processing_time": "0.001"
+        },
+        {
+          "input": "[sara] sara_synth_1",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "0",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0"
+        },
+        {
+          "input": "[sara] sara_synth_2",
+          "output": "entailed",
+          "predict_stratified": "entailed",
+          "predict_symba": "entailed",
+          "predict_cot": "entailed",
+          "metadata_tier_used": "l0",
+          "metadata_confidence": "0.8",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0"
+        }
+      ]
+    },
+    {
+      "dataset": "proofwriter_owa",
+      "examples": [
+        {
+          "input": "[proofwriter_owa] pw_AttNeg-OWA-D0-4611",
+          "output": "True",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "True",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "7",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.001"
+        },
+        {
+          "input": "[proofwriter_owa] pw_AttNeg-OWA-D0-4611",
+          "output": "False",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "False",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "7",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.001"
+        },
+        {
+          "input": "[proofwriter_owa] pw_AttNoneg-OWA-D0-3321",
+          "output": "True",
+          "predict_stratified": "Unknown",
+          "predict_symba": "False",
+          "predict_cot": "True",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "4",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.0"
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "[clutrr] clutrr_synth_0",
+          "output": "grandmother",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "2",
+          "metadata_domain": "narrative",
+          "metadata_processing_time": "0.022"
+        },
+        {
+          "input": "[clutrr] clutrr_synth_1",
+          "output": "father",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "2",
+          "metadata_domain": "narrative",
+          "metadata_processing_time": "0.023"
+        },
+        {
+          "input": "[clutrr] clutrr_synth_2",
+          "output": "mother_in_law",
+          "predict_stratified": "unknown",
+          "predict_symba": "unknown",
+          "predict_cot": "proved",
+          "metadata_tier_used": "unknown",
+          "metadata_confidence": "0.0",
+          "metadata_l0_facts": "1",
+          "metadata_domain": "general",
+          "metadata_processing_time": "0.025"
+        }
+      ]
+    }
+  ]
+}

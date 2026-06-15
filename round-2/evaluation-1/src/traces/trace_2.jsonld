@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/prov#",
+    "tier": "http://example.org/provenance#tier",
+    "confidence": "http://example.org/provenance#confidence",
+    "source_span": "http://example.org/provenance#source_span",
+    "ProofNode": "http://example.org/provenance#ProofNode"
+  },
+  "@type": "ProofNode",
+  "@id": "urn:proof:pw_AttNoneg-OWA-D0-3321",
+  "predicate": "query",
+  "args": [
+    "pw_AttNoneg-OWA-D0-3321"
+  ],
+  "tier": "unknown",
+  "confidence": 0.0,
+  "source_span": "goal_not_provable",
+  "label": "True",
+  "predict_stratified": "Unknown",
+  "predict_symba": "False",
+  "metadata_l0_facts": "4",
+  "children": []
+}

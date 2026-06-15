@@ -1,0 +1,24 @@
+{
+  "title": "Reasoning Benchmark Datasets: ProofWriter OWA, ContractNLI, SARA, OpenBookQA",
+  "layman_summary": "Four reasoning benchmark datasets (logical, legal, statutory, science) standardized into a unified schema for neuro-symbolic pipeline evaluation.",
+  "summary": "This artifact collects and standardizes four benchmark datasets for evaluating a neuro-symbolic FOL translation pipeline. The datasets cover distinct reasoning modalities and domains:\n\n1. **ProofWriter OWA** (4,998 examples, `tasksource/proofwriter`): Multi-hop natural language logical reasoning with three-valued labels (True/False/Unknown) under the Open World Assumption. Each example contains a theory (facts + rules in natural language) and a yes/no/unknown question. Proof depth ranges 0–5 hops. Domain: general. Source: AllenAI ProofWriter D* dataset via HuggingFace.\n\n2. **ContractNLI** (18,092 examples, `kiddothe2b/contract-nli`): Document-level natural language inference over NDA contract clauses. Labels: Entailment/Contradiction/NotMentioned. Each example pairs a contract clause (premise) with a hypothesis about confidentiality obligations. Domain: legal. Source: Stanford NLP ContractNLI (EMNLP 2021 Findings).\n\n3. **SARA** (376 examples, `SgfdDttt/sara`): US federal tax law statutory reasoning requiring multi-step application of tax code sections (151, 152). Each example includes a natural language case description, a yes/no tax obligation question, and gold Prolog predicate annotations for Phase 0 calibration. Train/test/phase0 splits preserved. Domain: legal. Source: SARA GitHub repo.\n\n4. **OpenBookQA** (4,957 examples, `allenai/openbookqa`): Science multi-hop QA requiring combination of a core science fact with reading comprehension. Each example has a core fact, a question, and 4 answer choices. Domain: science. Source: AllenAI OpenBookQA dataset.\n\nAll 28,423 examples are standardized to the `exp_sel_data_out` schema with per-example `input` (formatted prompt), `output` (gold label), and `metadata_*` fields (domain, split, hop_count, task_type, original_id, gold_predicates for SARA). Schema validated with aii-json. Full dataset is 122MB split into 8 parts (all ≤ 50MB each) in `data_out/` due to file size limit. Mini (12 examples, 3 per dataset) and preview (12 examples truncated) versions provided.",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": [
+          "data_out/full_data_out_1.json",
+          "data_out/full_data_out_2_1.json",
+          "data_out/full_data_out_2_2.json",
+          "data_out/full_data_out_2_3_1.json",
+          "data_out/full_data_out_2_3_2.json",
+          "data_out/full_data_out_2_4.json",
+          "data_out/full_data_out_3.json",
+          "data_out/full_data_out_4.json"
+        ],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  }
+}

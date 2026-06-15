@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>Proof Trace 3: pw_AttNoneg-OWA-D0-3321</title>
+<style>
+body { font-family: monospace; padding: 20px; background: #f9f9f9; }
+.node { padding: 12px 20px; border-radius: 8px; display: inline-block; margin: 8px; }
+.unknown { background: #bbb; color: #222; border: 2px solid #888; }
+.meta-table { border-collapse: collapse; margin-top: 16px; }
+.meta-table td, .meta-table th { border: 1px solid #ccc; padding: 6px 12px; }
+.meta-table th { background: #eee; }
+h2 { color: #333; }
+</style></head><body>
+<h2>Proof Trace 3: pw_AttNoneg-OWA-D0-3321</h2>
+<p>This trace illustrates the meta-interpreter's decision to return <strong>Unknown</strong>
+   rather than <strong>False</strong> (OWA semantics). The system correctly withholds a False
+   answer when the goal is not provable within the bounded SLD depth.</p>
+<div class="node unknown">
+  <strong>ProofNode</strong><br>
+  Predicate: <em>query</em><br>
+  Tier: <span style="color:#444">UNKNOWN</span><br>
+  Confidence: 0.0<br>
+  Source: goal_not_provable<br>
+  Gold Label: False<br>
+  Stratified Pred: Unknown<br>
+  SymBa Pred: False<br>
+  L0 Facts: 4
+</div>
+<table class="meta-table">
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Example ID</td><td>pw_AttNoneg-OWA-D0-3321</td></tr>
+<tr><td>Gold Label</td><td>False</td></tr>
+<tr><td>Stratified Prediction</td><td>Unknown</td></tr>
+<tr><td>SymBa Prediction</td><td>False</td></tr>
+<tr><td>CoT Prediction</td><td>False</td></tr>
+<tr><td>Tier Used</td><td>unknown (OWA: goal not provable)</td></tr>
+<tr><td>Confidence</td><td>0.0</td></tr>
+<tr><td>L0 Facts Extracted</td><td>4</td></tr>
+<tr><td>Domain</td><td>general</td></tr>
+</table>
+<p><em>Key insight: SymBa incorrectly returns False (closed-world assumption). The stratified
+   pipeline correctly returns Unknown under OWA semantics, avoiding a hallucinated False answer.</em></p>
+</body></html>
