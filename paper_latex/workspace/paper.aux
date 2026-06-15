@@ -1,0 +1,97 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Baek2025}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Tafjord2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The four-tier provenance-stratified neuro-symbolic pipeline. Each input document is first processed by L0 (document-grounded KB initialization), followed by L1 (bounded SLD resolution at depth 5), L2 (domain-adaptive ontology: LKIF for legal, ConceptNet for narrative, Wikidata for general), and L3 (self-consistency LLM abduction, $K$=5). Each tier is exhausted before the next is consulted. When all tiers fail, the system returns \emph  {Unknown} rather than \emph  {False}, implementing three-valued OWA semantics. Every proof-tree node carries a (tier, confidence) annotation propagated under weakest-link semantics.\relax }}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:architecture}{{1}{2}{The four-tier provenance-stratified neuro-symbolic pipeline. Each input document is first processed by L0 (document-grounded KB initialization), followed by L1 (bounded SLD resolution at depth 5), L2 (domain-adaptive ontology: LKIF for legal, ConceptNet for narrative, Wikidata for general), and L3 (self-consistency LLM abduction, $K$=5). Each tier is exhausted before the next is consulted. When all tiers fail, the system returns \emph {Unknown} rather than \emph {False}, implementing three-valued OWA semantics. Every proof-tree node carries a (tier, confidence) annotation propagated under weakest-link semantics.\relax }{figure.caption.1}{}}
+\citation{Baek2025}
+\citation{Olausson2023}
+\citation{Pan2023}
+\citation{Han2022}
+\citation{Golovneva2022}
+\citation{Richardson2006}
+\citation{Manhaeve2018}
+\citation{Lewis2020}
+\citation{Holzenberger2023}
+\citation{Hoekstra2007}
+\citation{Koreeda2021}
+\@writefile{toc}{\contentsline {paragraph}{Summary of contributions:}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Neuro-symbolic SLD resolution.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{FOL translation and theorem proving.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Hybrid reasoning with ordered fallback.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Retrieval-augmented generation.}{3}{section*.6}\protected@file@percent }
+\citation{Hoekstra2007}
+\citation{Speer2017}
+\@writefile{toc}{\contentsline {paragraph}{Legal and statutory reasoning.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{4}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{4}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System Architecture}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L0 --- Document-Grounded KB Initialization.}{4}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L1 --- Bounded SLD Resolution.}{4}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L2 --- Domain-Adaptive Ontology.}{4}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L3 --- Self-Consistency LLM Abduction.}{4}{section*.11}\protected@file@percent }
+\citation{Baek2025}
+\citation{Wei2022}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Representative JSON-LD derivation trace for a ProofWriter OWA example (id: pw\_AttNeg-OWA-D0-4611). The root node shows the query goal resolved to tier=unknown (gray) with confidence 0.0 because no tier proved the goal. The stratified system correctly returns \emph  {Unknown}, while the SymBa baseline returns \emph  {False}. Gold label is \emph  {True} in this example; the Unknown response is incorrect here, but on Unknown-labeled examples it produces the correct answer.\relax }}{5}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:trace}{{2}{5}{Representative JSON-LD derivation trace for a ProofWriter OWA example (id: pw\_AttNeg-OWA-D0-4611). The root node shows the query goal resolved to tier=unknown (gray) with confidence 0.0 because no tier proved the goal. The stratified system correctly returns \emph {Unknown}, while the SymBa baseline returns \emph {False}. Gold label is \emph {True} in this example; the Unknown response is incorrect here, but on Unknown-labeled examples it produces the correct answer.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Weakest-Link Provenance Propagation.}{5}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{JSON-LD Trace Export.}{5}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Baselines}{5}{subsection.3.2}\protected@file@percent }
+\citation{Tafjord2021}
+\citation{Koreeda2021}
+\citation{Holzenberger2020}
+\citation{Sinha2019}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{6}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{6}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experimental Setup}{6}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Main Results}{6}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Per-benchmark accuracy with 95\% Wilson confidence intervals. McNemar's test compares stratified vs.\ SymBa. CLUTRR excluded (data-loading artifact, all systems 0\%).\relax }}{6}{table.caption.15}\protected@file@percent }
+\newlabel{tab:main}{{1}{6}{Per-benchmark accuracy with 95\% Wilson confidence intervals. McNemar's test compares stratified vs.\ SymBa. CLUTRR excluded (data-loading artifact, all systems 0\%).\relax }{table.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Accuracy breakdown on ProofWriter D*(OWA) ($n$=200) stratified by gold label class. The stratified pipeline (blue) achieves 100\% accuracy on Unknown-labeled examples by returning \emph  {Unknown} for all unprovable goals. The SymBa baseline (orange) achieves 0\% on Unknown-labeled examples because it defaults to \emph  {False}. Both systems achieve 0\% on True-labeled and False-labeled examples, as the heuristic L0 extractor does not provide provable facts for these cases. The overall gap (45.0\% vs.\ 27.5\%) is entirely attributable to correct Unknown propagation.\relax }}{7}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:breakdown}{{3}{7}{Accuracy breakdown on ProofWriter D*(OWA) ($n$=200) stratified by gold label class. The stratified pipeline (blue) achieves 100\% accuracy on Unknown-labeled examples by returning \emph {Unknown} for all unprovable goals. The SymBa baseline (orange) achieves 0\% on Unknown-labeled examples because it defaults to \emph {False}. Both systems achieve 0\% on True-labeled and False-labeled examples, as the heuristic L0 extractor does not provide provable facts for these cases. The overall gap (45.0\% vs.\ 27.5\%) is entirely attributable to correct Unknown propagation.\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Analysis of the ProofWriter OWA Result}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Tier Distribution}{7}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Tier distribution (fraction of examples resolved at each tier) across the three benchmarks with non-trivial results. For SARA and ContractNLI (synthetic), 100\% of examples resolve at L0. For ProofWriter OWA (real data), 100\% of examples return Unknown---the L0 heuristic extractor provides surface-form facts that the L1 SLD resolver cannot chain into the queried properties. The L2 tier triggers zero times across all benchmarks (Wilson 95\% CI: [0.000, 0.007]), and L3 is never invoked.\relax }}{8}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:tier-dist}{{4}{8}{Tier distribution (fraction of examples resolved at each tier) across the three benchmarks with non-trivial results. For SARA and ContractNLI (synthetic), 100\% of examples resolve at L0. For ProofWriter OWA (real data), 100\% of examples return Unknown---the L0 heuristic extractor provides surface-form facts that the L1 SLD resolver cannot chain into the queried properties. The L2 tier triggers zero times across all benchmarks (Wilson 95\% CI: [0.000, 0.007]), and L3 is never invoked.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Unverified Claims}{8}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{9}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{9}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}What the Evidence Supports}{9}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Limitations and Future Work}{9}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Comparison to Chain-of-Thought}{9}{subsection.5.3}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Baek2025}{{1}{2025}{{Baek et~al.}}{{Baek, Jeong, Kang, Park, and Hwang}}}
+\bibcite{Golovneva2022}{{2}{2022}{{Golovneva et~al.}}{{Golovneva, Chen, Poff, Corredor, Zettlemoyer, Fazel-Zarandi, and Celikyilmaz}}}
+\bibcite{Han2022}{{3}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun, Zubova, Qiao, Burtell, Peng, Fan, Liu, Wong, Sailor, Ni, Nan, Kasai, Yu, Zhang, Joty, Fabbri, Kryscinski, Lin, Xiong, and Radev}}}
+\bibcite{Hoekstra2007}{{4}{2007}{{Hoekstra et~al.}}{{Hoekstra, Breuker, Bello, and Boer}}}
+\bibcite{Holzenberger2023}{{5}{2023}{{Holzenberger and Durme}}{{}}}
+\bibcite{Holzenberger2020}{{6}{2020}{{Holzenberger et~al.}}{{Holzenberger, Blair-Stanek, and Durme}}}
+\bibcite{Koreeda2021}{{7}{2021}{{Koreeda and Manning}}{{}}}
+\bibcite{Lewis2020}{{8}{2020}{{Lewis et~al.}}{{Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal, K\"{u}ttler, Lewis, tau Yih, Rockt\"{a}schel, Riedel, and Kiela}}}
+\bibcite{Manhaeve2018}{{9}{2018}{{Manhaeve et~al.}}{{Manhaeve, Dumancic, Kimmig, Demeester, and Raedt}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{10}{section.6}\protected@file@percent }
+\bibcite{Olausson2023}{{10}{2023}{{Olausson et~al.}}{{Olausson, Gu, Lipkin, Zhang, Solar-Lezama, Tenenbaum, and Levy}}}
+\bibcite{Pan2023}{{11}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Richardson2006}{{12}{2006}{{Richardson and Domingos}}{{}}}
+\bibcite{Sinha2019}{{13}{2019}{{Sinha et~al.}}{{Sinha, Sodhani, Dong, Pineau, and Hamilton}}}
+\bibcite{Speer2017}{{14}{2017}{{Speer et~al.}}{{Speer, Chin, and Havasi}}}
+\bibcite{Tafjord2021}{{15}{2021}{{Tafjord et~al.}}{{Tafjord, Dalvi, and Clark}}}
+\bibcite{Wei2022}{{16}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Chi, Le, and Zhou}}}
+\gdef \@abspage@last{11}

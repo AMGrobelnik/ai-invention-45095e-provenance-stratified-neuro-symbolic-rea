@@ -1,0 +1,15 @@
+{
+  "title": "Provenance-Stratified Neuro-Symbolic Reasoning Paper",
+  "summary": "Generated a complete 11-page publication-ready LaTeX paper titled 'Provenance-Stratified Neuro-Symbolic Reasoning: Tier-Ordered SLD Resolution with Open-World Unknown Propagation'. The paper includes: (1) Abstract summarizing the four-tier escalation architecture and key results (45.0% vs 27.5%, McNemar p=0.0046); (2) Introduction with motivation, contributions list, and fig1 architecture diagram; (3) Related Work covering neuro-symbolic SLD, FOL translation, hybrid reasoning, RAG, and legal reasoning; (4) Methods section with detailed descriptions of L0-L3 tiers, weakest-link provenance propagation, JSON-LD trace export, and baselines, including fig2 proof trace; (5) Results section with experimental setup, main results table with Wilson CIs and McNemar test, ProofWriter OWA analysis, tier distribution with fig3 accuracy breakdown and fig4 tier distribution chart, and honest unverified claims section; (6) Discussion covering supported evidence, limitations and future work, and CoT comparison; (7) Conclusion. All 4 figures (fig1_v0.jpg through fig4_v0.jpg) are included using figure* environments with 21:9 aspect ratio placement. BibTeX bibliography contains 16 references fetched via Semantic Scholar and manually verified. Paper compiled successfully to PDF with pdflatex + bibtex, 4 compilations total. Visual review of all 11 pages confirmed clean layout with no overlapping figures, cut-off text, or spacing issues.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg",
+      "figures/fig4_v0.jpg"
+    ]
+  }
+}
